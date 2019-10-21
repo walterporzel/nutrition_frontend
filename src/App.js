@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { Route, Link } from "react-router-dom";
 import Foods from './Foods'
+import FoodDetail from './FoodDetail'
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Link to="/foods">Food List</Link>
       </nav>
       <Route path="/foods" exact component = {Foods} />
+      <Route path="/foods/:id" exact component = {FoodDetail} />
     </div>
   );
 }
