@@ -22,6 +22,7 @@ nav{
 }
 .navbarLinks{
   color: white;
+  margin: 0 5px;
 }
 .wrapper{
   display: flex;
@@ -92,5 +93,16 @@ hr{
   justify-content: flex-end;
 }
 .percentValue{
+  font-weight: 700;
+}
+/* log styles */
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th{
+  padding: 2px 4px;
+}
+.totals{
   font-weight: 700;
 }
