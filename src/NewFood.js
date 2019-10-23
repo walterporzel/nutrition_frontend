@@ -37,21 +37,33 @@ function NewFood(props){
     }
 
     return(
-        <form onSubmit={saveProduct}>
-            <label>Food Name: </label>
-            <input type='text' name='name' id='id' placeholder='Enter name' value={product.name} onChange={onChange} />
-            <label>Serving Size: </label>
-            <input type='number' name='serving_size' id='serving_size' placeholder='Enter serving size' value={product.serving_size} onChange={onChange} />
-            <label>Serving Size Unit: </label>
-            <input type='text' name='serving_size_unit' id='serving_size_unit' placeholder='Enter unit' value={product.serving_size_unit} onChange={onChange} />
-            <label>Calories: </label>
-            <input type='number' name='calories' id='calories' placeholder='Enter calories' value={product.calories} onChange={onChange} />
-            <label>Fat: </label>
-            <input type='number' name='fat' id='fat' placeholder='Enter fat' value={product.fat} onChange={onChange} />
-            <label>Carbs: </label>
-            <input type='number' name='carbs' id='carbs' placeholder='Enter carbs' value={product.carbs} onChange={onChange} />
-            <label>Protien: </label>
-            <input type='number' name='protien' id='protien' placeholder='Enter protien' value={product.protien} onChange={onChange} />
+        <form onSubmit={saveProduct} className='inputForm'>
+            <div className='formRow'>
+                <label>Food Name: </label>
+                <input type='text' name='name' id='id' placeholder='Enter name' value={product.name} onChange={onChange} />
+            </div>
+            <div className='formRow'>
+                <label>Serving Size: </label>
+                <input type='number' name='serving_size' id='serving_size' placeholder='Enter serving size' value={product.serving_size} onChange={onChange} />
+                <label> Unit: </label>
+                <input type='text' name='serving_size_unit' id='serving_size_unit' placeholder='Enter unit' value={product.serving_size_unit} onChange={onChange} />
+            </div>
+            <div className='formRow'>
+                <label>Calories: </label>
+                <input type='number' name='calories' id='calories' placeholder='Enter calories' value={product.calories} onChange={onChange} />
+            </div>
+            <div className='formRow'>
+                <label>Fat: </label>
+                <input type='number' name='fat' id='fat' placeholder='Enter fat' value={product.fat} onChange={onChange} />
+            </div>
+            <div className='formRow'>
+                <label>Carbs: </label>
+                <input type='number' name='carbs' id='carbs' placeholder='Enter carbs' value={product.carbs} onChange={onChange} />
+            </div>
+            <div className='formRow'>
+                <label>Protien: </label>
+                <input type='number' name='protien' id='protien' placeholder='Enter protien' value={product.protien} onChange={onChange} />
+            </div>
             <button type='submit'>Save Food</button>
         </form>
     )

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 function Foods() {
     const [data, setData] = useState( [] );
+    const [search, setSearch] = useState ( {search: ''} );
 
     useEffect(() => {
         const fetchData = async () => {
@@ -16,10 +17,30 @@ function Foods() {
 
         fetchData();
     }, []);
+
+    const onSearchChange = (e) => {
+        setSearch({search: e.target.value})
+        console.log(search.search)
+    }
+
+
     return (
         <div>
+            <input type="search" placeholder="search foods" onChange={onSearchChange}/>
             <Link to='newFood'><button>Create Food</button></Link>
-            {data.map(item => (
+            {data.filter(food => {
+                let searchValue = search.search.toLowerCase()
+                let foodName = food.name.toLowerCase()
+                if (!searchValue){
+                    return true
+                }
+                else if(foodName.includes(searchValue)){
+                    return true
+                }
+                else{
+                    return false
+                }
+            }).map(item => (
                 <Link to={'/foods/' + item.id}><p>{item.name}</p></Link>
             ))}
         </div>
