@@ -13,7 +13,7 @@ function App() {
   let log = [];
   
   return (
-    <div>
+    <div className='pageWrapper'>
       <div className='head'>
         <Link to='/' className='title'><h1>Nutrition4U</h1></Link>
         <nav>
@@ -21,7 +21,6 @@ function App() {
           <Link to="/log" className='navbarLinks'>Food Log</Link>
         </nav>
       </div>
-      <button onClick={() => console.log(log)}>Log state</button>
       <Route path='/' exact component = {Intro} />
       <Route path="/foods" exact component = {Foods} />
       <Route path="/foods/:id"

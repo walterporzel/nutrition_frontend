@@ -27,9 +27,11 @@ nav{
 .wrapper{
   display: flex;
   width: 100%;
+  height: 100%;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px;
+  padding-top: 50px;
+  background-color: cadetblue;
 }
 hr{
   margin: 1px;
@@ -37,6 +39,10 @@ hr{
   height: 1px;
   color: black;
   background-color: black;
+}
+.pageWrapper{
+  height: 100%;
+  width: 100%;
 }
 
 /* Form styles */
@@ -54,6 +60,7 @@ hr{
   border: 3px solid black;
   width: 300px;
   padding: 5px;
+  background-color: white;
 }
 .labelTitle{
   margin: 5px 0;
@@ -99,10 +106,18 @@ hr{
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
+  background-color: white;
 }
 th{
   padding: 2px 4px;
 }
 .totals{
   font-weight: 700;
+}
+/* Food list styles */
+.food{
+  margin: 10px;
+}
+input{
+  margin-bottom: 10px;
 }

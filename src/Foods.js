@@ -25,7 +25,7 @@ function Foods() {
 
 
     return (
-        <div>
+        <div className='wrapper'>
             <input type="search" placeholder="search foods" onChange={onSearchChange}/>
             <Link to='newFood'><button>Create Food</button></Link>
             {data.filter(food => {
@@ -41,7 +41,7 @@ function Foods() {
                     return false
                 }
             }).map(item => (
-                <Link to={'/foods/' + item.id}><p>{item.name}</p></Link>
+                <Link to={'/foods/' + item.id}><p className='food'>{item.name}</p></Link>
             ))}
         </div>
     );
