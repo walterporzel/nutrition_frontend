@@ -9,6 +9,9 @@
 h1{
   margin-top: 0;
 }
+p{
+  margin: 0;
+}
 .title{
   color: white;
   text-decoration: none;
@@ -25,6 +28,14 @@ nav{
   width: 100%;
   flex-direction: column;
   align-items: center;
+  margin-top: 50px;
+}
+hr{
+  margin: 1px;
+  border: none;
+  height: 1px;
+  color: black;
+  background-color: black;
 }
 
 /* Form styles */
@@ -35,4 +46,51 @@ nav{
 }
 .formRow{
   margin: 10px;
+}
+
+/* Nutrition label/food detail styles */
+.labelWrapper{
+  border: 3px solid black;
+  width: 300px;
+  padding: 5px;
+}
+.labelTitle{
+  margin: 5px 0;
+  font-weight: 900;
+}
+.upperLabelRow{
+  margin: 0 0 2px 0;
+}
+.thickLine{
+  margin: 1px;
+  border: none;
+  height: 10px;
+  color: black;
+  background-color: black;
+}
+.labelRow{
+  display: flex;
+  justify-content: space-between;
+}
+.labelBold{
+  display: flex;
+}
+.labelBoldTitle{
+  font-weight: 700;
+  margin-right: 3px;
+}
+.mediumLine{
+  margin: 1px;
+  border: none;
+  height: 5px;
+  color: black;
+  background-color: black;
+}
+.percentHeader{
+  font-weight: 700;
+  display: flex;
+  justify-content: flex-end;
+}
+.percentValue{
+  font-weight: 700;
 }

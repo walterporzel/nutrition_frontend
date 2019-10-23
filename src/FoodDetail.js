@@ -33,18 +33,45 @@ function FoodDetail(props) {
         })
     }
     return (
-        <div>
-            <h3>{data.name}</h3>
-            <p>Serving size: {data.serving_size} {data.serving_size_unit}</p>
-            <h4>Calories: {data.calories} cal</h4>
-            <p>Fat: {data.fat}g</p>
-            <p>Carbs: {data.carbs}g</p>
-            <p>Protien: {data.protien}g</p>
-            <div>
-                <Link to={'/updateFood/'+data.id}><button>Update Food</button></Link>
-                <button onClick={() => {deleteFood(data.id) }}>Delete Food</button>
+        <div className='wrapper'>
+            <div className='labelWrapper'>
+                <h2 className='labelTitle'>Nutrition Facts</h2>
+                <p className='upperLabelRow'>{data.name}</p>
+                <p className='upperLabelRow'>Serving size: {data.serving_size} {data.serving_size_unit}</p>
+                <hr className='thickLine'/>
+                <p>Amount Per Serving</p>
+                <hr />
+                <div className='labelRow'>
+                    <p className='labelBold'><p className='labelBoldTitle'>Calories</p> {data.calories}</p>
+                    <p>Calories from Fat {Math.round(data.fat*9)}</p>
+                </div>
+                <hr className='mediumLine'/>
+                <div className='percentHeader'>% Daily Value*</div>
+                <hr />
+                <div className='labelRow'>
+                    <p className='labelBold'> <p className='labelBoldTitle'>Total Fat</p>{data.fat}g</p>
+                    <p className='percentValue'>{Math.round((data.fat/65)*100)}%</p>
+                </div>
+                <hr />
+                <div className='labelRow'>
+                    <p className='labelBold'> <p className='labelBoldTitle'>Total Carbohydrates</p>{data.carbs}g</p>
+                    <p className='percentValue'>{Math.round((data.carbs/300)*100)}%</p>
+                </div>
+                <hr />
+                <div className='labelRow'>
+                    <p className='labelBold'> <p className='labelBoldTitle'>Protein</p>{data.protien}g</p>
+                    <p className='percentValue'>{Math.round((data.protien/100)*100)}%</p>
+                </div>
+                <hr className='mediumLine'/>
+                <p>*Percent Daily Values are based on a 2000 calorie diet</p>
             </div>
+            <div>
+                    <Link to={'/updateFood/'+data.id}><button>Update Food</button></Link>
+                    <button onClick={() => {deleteFood(data.id) }}>Delete Food</button>
+            </div>
+            
         </div>
+
     );
 }
 
