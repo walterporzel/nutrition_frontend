@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
-import { tsPropertySignature } from '@babel/types';
+import { tsPropertySignature, arrayExpression } from '@babel/types';
+import Fooodlog from './Foodlog';
 
 function FoodDetail(props) {
     const path = 'http://127.0.0.1:8000' + window.location.pathname;
@@ -68,6 +69,7 @@ function FoodDetail(props) {
             <div>
                     <Link to={'/updateFood/'+data.id}><button>Update Food</button></Link>
                     <button onClick={() => {deleteFood(data.id) }}>Delete Food</button>
+                    <button onClick={() => props.log.push(data)}>Save Food</button>
             </div>
             
         </div>
