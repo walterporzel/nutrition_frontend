@@ -26,3 +26,13 @@ nav{
   flex-direction: column;
   align-items: center;
 }
+
+/* Form styles */
+.inputForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formRow{
+  margin: 10px;
+}
