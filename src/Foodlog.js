@@ -13,6 +13,10 @@ function Fooodlog(props){
         totalCarbs = totalCarbs + Number(value.carbs)
         totalProtien = totalProtien + Number(value.protien)
     })
+    const reset = () =>{
+        props.log.length = 0;
+        props.history.push('/log')
+    }
 
     return(
         <div className='wrapper'>
@@ -27,7 +31,7 @@ function Fooodlog(props){
                 {props.log.map(val => (
                     <tr>
                         <td>{val.name}</td>
-                        <td>{Number(val.calories)}g</td>
+                        <td>{Number(val.calories)}</td>
                         <td>{Number(val.fat)}g</td>
                         <td>{Number(val.carbs)}g</td>
                         <td>{Number(val.protien)}g</td>
@@ -35,7 +39,7 @@ function Fooodlog(props){
                 ))}
                 <tr className='totals'>
                     <td>Totals</td>
-                    <td>{totalCal}g</td>
+                    <td>{totalCal}</td>
                     <td>{totalFat}g</td>
                     <td>{totalCarbs}g</td>
                     <td>{totalProtien}g</td>
@@ -48,6 +52,7 @@ function Fooodlog(props){
                     <td>{totalProtien}%</td>
                 </tr>
             </table>
+            <button onClick={() => {props.log.length = 0; props.history.push('/log')}}>Clear Log</button>
         </div>
     )
 
