@@ -49,7 +49,7 @@ function Fooodlog(props){
                     <td>{Math.round(totalCal/2000*100)}%</td>
                     <td>{Math.round(totalFat/65*100)}%</td>
                     <td>{Math.round(totalCarbs/300*100)}%</td>
-                    <td>{totalProtien}%</td>
+                    <td>{Math.round(totalProtien)}%</td>
                 </tr>
             </table>
             <button onClick={() => {props.log.length = 0; props.history.push('/log')}}>Clear Log</button>
