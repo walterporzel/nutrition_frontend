@@ -1,68 +1,25 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Nutrition4U
 
-## Available Scripts
+## Description
 
-In the project directory, you can run:
+You are what you eat! And if that’s the case, you better know exactly what’s in whatever your eating. Nutrition4U is a full-stack application built utilizing the Django REST framework API backend and React Functional Components in the front end. Users have the ability to search an extensive catalog of foods, see their nutritional content, and add it to a daily food log. Utilizing Nutrition4U makes tracking your daily macronutrient content a breeze so that the pounds will be melting off in no time.    
 
-### `npm start`
+![Nutrition Screen](./appImage.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## List of Features
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The application database contains a food model that consists of the food name, serving size, calories, fat content, carbohydrate content, and protein content. The model is built with create, read, update and destroy functionality allowing end-users to easily manipulate backend data using front end forms and buttons that utilize Axios to make, GET, POST, PUT and DELETE requests. The React UI is built utilizing React Router allowing users to rapidly toggle between multiple views. 
 
-### `npm test`
+If a user navigates to the food list link they will see a list of every food currently in our database which they can easily dynamically search through, or create a new entry utilizing the create food form. When navigating to an individual food from the front end a nutrition label is rendered with daily value percentages calculated based on a 2,000 calorie diet. Users can delete, update or save the food to a log from the individual view. Upon saving, a copy of the food will be added to the food log table which can be accessed utilizing the food log link at the top of the page. The food log tabulates each food added and calculates total values as well as %daily values based on a 2,000 calorie diet (65g fat, 300g carbs, 100g protein).  
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Technologies Used
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* Django REST framework
+* Python
+* Python Virtual Enviroments
+* Node.js
+* React Functional Components
+* React-Router
+* Javascript
+* Cascading Style Sheets (CSS)
